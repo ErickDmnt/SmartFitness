@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartFitness.Vistas.Login"
+             Title="Login"
+             NavigationPage.HasNavigationBar="False">
+    
+    <VerticalStackLayout
+            BackgroundColor="White">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label
+                    Text="SMART FITNESS"
+                    FontSize="40"
+                    TextColor="#00C4FF"
+                    Padding="20"
+                    HorizontalOptions="Center"
+                FontAttributes="Bold"
+                />
+        </Grid>
+
+        <!-- Source="https://static.vecteezy.com/system/resources/thumbnails/012/986/755/small/abstract-circle-logo-icon-free-png.png"-->
+        <Image
+                
+                Source="https://static.vecteezy.com/system/resources/thumbnails/012/986/755/small/abstract-circle-logo-icon-free-png.png"
+                HorizontalOptions="Center" />
+
+
+        <Label
+                Text="INICIAR SESION"
+                FontSize="25"
+                VerticalOptions="Center"
+                HorizontalOptions="CenterAndExpand"
+                TextColor="#00C4FF"
+                FontAttributes="Bold"
+                />
+
+        <Grid Padding="25" RowSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Frame CornerRadius="10" Padding="0" BackgroundColor="White" HasShadow="True" Grid.Row="0">
+                <Entry
+                    x:Name="txtUsuario"
+                    Placeholder="Ingrese su usuario"
+                    BackgroundColor="Transparent"
+                    PlaceholderColor="#00C4FF"
+                 />
+            </Frame>
+            <Frame CornerRadius="10" Padding="0" BackgroundColor="White" HasShadow="True" Grid.Row="1">
+                <Entry
+                     x:Name="txtContra"
+                    Placeholder="Ingrese su contraseña"
+                    IsPassword="True"
+                    BackgroundColor="Transparent"
+                    PlaceholderColor="#00C4FF"
+                       
+                />
+            </Frame>
+        </Grid>
+        <Grid Padding="25,0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button
+                     x:Name="btnIniciarSesion"
+                     Text="Entrar"
+                BackgroundColor="#0078FF"
+                Clicked="btnIniciarSesion_Clicked"
+                />
+        </Grid>
+
+
+        <Grid Padding="25,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image
+                   Source="facebook.png"
+                    WidthRequest="10"
+                HeightRequest="10"
+                   HorizontalOptions="Center"
+                Grid.Column="0"
+                />
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
